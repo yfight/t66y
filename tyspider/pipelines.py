@@ -24,7 +24,7 @@ class JsonExportPipeline(object):
         return item
 
 
-class TyspydierPipeline(object):
+class TyspiderPipeline(object):
     def __init__(self):
         now = datetime.datetime.now()
         self. file = open(now.strftime('%Y%m%d%H%M%S%f.json'), 'wb')

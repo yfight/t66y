@@ -1,15 +1,15 @@
 # -*- coding: utf-8 -*-
 
 import scrapy
-from tyspydier.items import TyspydierItem
+from tyspider.items import TyspiderItem
 
 PAGE_COUNT_MAX = 2
 KEY_WORDS = [
-    '一本道'
+    'rct'
 ]
 
 
-class TestSpider(scrapy.Spider):
+class TySpider(scrapy.Spider):
     name = "tyspd"
     allowed_domain = ['t66y.com']
     start_urls = [
@@ -27,7 +27,7 @@ class TestSpider(scrapy.Spider):
             for key_word in KEY_WORDS:
                 if key_word in encoded_title:
                     link = movie.css('a::attr(href)').extract_first()
-                    item = TyspydierItem(
+                    item = TyspiderItem(
                         name=title,
                         url=self._format_link(link),
                         page_url=response.url,

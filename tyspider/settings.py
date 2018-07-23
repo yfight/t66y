@@ -65,7 +65,7 @@ ROBOTSTXT_OBEY = True
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-    'tyspydier.pipelines.TyspydierPipeline': 100,
+    'tyspider.pipelines.TyspiderPipeline': 100,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)

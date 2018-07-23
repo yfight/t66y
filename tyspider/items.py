@@ -8,7 +8,7 @@
 import scrapy
 
 
-class TyspydierItem(scrapy.Item):
+class TyspiderItem(scrapy.Item):
     name = scrapy.Field()
     url = scrapy.Field()
     page_url = scrapy.Field()
